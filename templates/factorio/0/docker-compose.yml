@@ -19,7 +19,7 @@ FactorioData:
 FactorioLB:
   image: rancher/load-balancer-service
   ports:
-    - "34197/udp"
+    - 34197/udp
   links:
     - Factorio:Factorio
 
