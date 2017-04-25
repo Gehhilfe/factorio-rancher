@@ -1,0 +1,27 @@
+Factorio:
+  image: docker pull zopanix/factorio:0.15.1
+  restart: always
+  lables:
+    io.rancher.sidekicks: FactorioData
+  volumes_from:
+    - FactorioData
+
+FactorioData:
+  image: busybox
+  labels:
+    io.rancher.contrainer.start_once: 'true'
+  net: none
+  entrypoint: /bin/true
+  volumes:
+    - ${DATA_VOLUME}:/factorio
+  volumes_driver: ${VOLUME_DRIVER}
+
+FactorioLB:
+  image: rancher/load-balancer-service
+  ports:
+    - "34197/udp"
+  links:
+    - Factorio:Factorio
+
+
+
