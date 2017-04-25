@@ -4,6 +4,12 @@
   descrption: "Factorio server"
   uuid: factorio-0
   questions:
+    - variable: "SCALE"
+      label: "Scale"
+      description: "How many servers to run"
+      default: 1
+      required: true
+      type: "int"
     - variable: "DATA_VOLUME"
       label: "Data Volume"
       description: "Host directory or Convoy volume name, followed by a colon (':'). E.g.: '/mnt/data:'; 'minecraft-data:'"
