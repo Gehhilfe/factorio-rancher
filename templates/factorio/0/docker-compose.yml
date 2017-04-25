@@ -1,7 +1,7 @@
 Factorio:
   image: docker pull zopanix/factorio:0.15.1
   restart: always
-  lables:
+  labels:
     io.rancher.sidekicks: FactorioData
   volumes_from:
     - FactorioData
