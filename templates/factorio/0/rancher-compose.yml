@@ -3,34 +3,16 @@
   version: "v0.15.1"
   descrption: "Factorio server"
   questions:
-    - variable: "SCALE"
-      label: "Scale"
-      description: "How many servers to run"
-      default: 1
-      required: true
-      type: "int"
     - variable: "DATA_VOLUME"
       label: "Data Volume"
-      description: "Host directory or Convoy volume name, followed by a colon (':'). E.g.: '/mnt/data:'; 'minecraft-data:'"
+      description: "Host directory or Convoy volume name, followed by a colon (':'). E.g.: '/mnt/data:'; 'data:'"
       type: "string"
-    - variable: "VOLUME_DRIVER"
-      description: "Name of Convoy Storage Pool, if one is used."
-      type: "string"
+
 Factorio:
-  scale: ${SCALE}
   health_check:
     port: 27015
     interval: 2000
     initializing_timeout: 30000
-    unhealthy_threshold: 3
-    strategy: recreate
-    response_timeout: 2000
-    healthy_threshold: 2
-FactorioLB:
-  load_balancer_config: {}
-  health_check:
-    port: 42
-    interval: 2000
     unhealthy_threshold: 3
     strategy: recreate
     response_timeout: 2000
