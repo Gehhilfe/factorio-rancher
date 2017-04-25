@@ -14,7 +14,7 @@ FactorioData:
   entrypoint: /bin/true
   volumes:
     - ${DATA_VOLUME}:/factorio
-  volumes_driver: ${VOLUME_DRIVER}
+  volume_driver: ${VOLUME_DRIVER}
 
 FactorioLB:
   image: rancher/load-balancer-service
