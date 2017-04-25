@@ -8,14 +8,8 @@ services:
       - 34197/udp
     labels:
       io.rancher.sidekicks: FactorioData
-    volumes_from:
-      - FactorioData
-
-  FactorioData:
-    image: busybox
-    labels:
-      io.rancher.contrainer.start_once: 'true'
-    entrypoint: /bin/true
     volumes:
       - ${DATA_VOLUME}:/factorio
 
+volumes:
+  - ${DATA_VOLUME}
