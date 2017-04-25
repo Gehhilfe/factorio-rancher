@@ -6,7 +6,5 @@ services:
     restart: always
     ports:
       - 34197/udp
-    labels:
-      io.rancher.sidekicks: FactorioData
     volumes:
       - ${DATA_VOLUME}:/factorio
