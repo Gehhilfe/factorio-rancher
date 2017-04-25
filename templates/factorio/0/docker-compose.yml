@@ -10,6 +10,3 @@ services:
       io.rancher.sidekicks: FactorioData
     volumes:
       - ${DATA_VOLUME}:/factorio
-
-volumes:
-  - ${DATA_VOLUME}
