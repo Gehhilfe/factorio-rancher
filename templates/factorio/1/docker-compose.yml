@@ -1,0 +1,10 @@
+version: "2"
+services:
+
+  Factorio:
+    image: dtandersen/factorio:0.15.2
+    restart: always
+    ports:
+      - 34197/udp
+    volumes:
+      - ${DATA_VOLUME}:/factorio

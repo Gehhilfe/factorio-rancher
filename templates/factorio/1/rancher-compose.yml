@@ -1,0 +1,19 @@
+.catalog:
+  name: "Factorio"
+  version: "v0.15.2"
+  descrption: "Factorio server"
+  questions:
+    - variable: "DATA_VOLUME"
+      label: "Data Volume"
+      description: "Host directory or Convoy volume name, followed by a colon (':'). E.g.: '/mnt/data:'; 'data:'"
+      type: "string"
+
+Factorio:
+  health_check:
+    port: 27015
+    interval: 2000
+    initializing_timeout: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2
