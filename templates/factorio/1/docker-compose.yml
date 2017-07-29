@@ -2,7 +2,7 @@ version: "2"
 services:
 
   Factorio:
-    image: dtandersen/factorio:0.15.2
+    image: dtandersen/factorio:0.15.31
     restart: always
     ports:
       - 34197/udp
